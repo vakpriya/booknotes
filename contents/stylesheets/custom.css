@@ -1,0 +1,4 @@
+/* Inline `code` at the same size as the surrounding text. */
+.md-typeset :not(pre) > code {
+  font-size: inherit;
+}

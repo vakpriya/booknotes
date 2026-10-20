@@ -1,0 +1,50 @@
+site_name: BookNotes
+site_url: https://vakpriya.github.io/booknotes/
+# repo_url: https://github.com/vakpriya/booknotes # Display in header
+docs_dir: contents
+
+# No nav: block on purpose. MkDocs builds the nav from the folders under
+# contents/ (politics/ -> "Politics"), and each page's title comes from
+# its first "# heading". Add a new book = add a .md file; nothing else.
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - stylesheets/custom.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - def_list
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc:
+      permalink: true
